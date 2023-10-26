@@ -6,7 +6,7 @@ router = APIRouter(prefix='/path_parameters')
 
 
 @router.get("/items/{item_id}")
-async def read_item(item_id: int):
+async def path_parameter(item_id: int):
     """
     Returns a JSON object with the item_id.
     :param item_id: An integer representing the item ID.
@@ -21,7 +21,7 @@ class ModelName(str, Enum):
 
 
 @router.get("/models/{model_name}")
-async def get_model(model_name: ModelName):
+async def pre_defined_path_parameters(model_name: ModelName):
     """
     Get information about a machine learning model.
 

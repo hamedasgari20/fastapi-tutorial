@@ -11,7 +11,7 @@ async def query_parameters(skip: int = 0, limit: int = 10):
     Get a list of items from the fake database.
 
     Parameters:
-    - skip (int): The number of items to skip.
+    # - skip (int): The number of items to skip.
     - limit (int): The maximum number of items to return.
 
     Returns:

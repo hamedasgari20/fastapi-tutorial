@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 
-from apps.path_parameters.path_parameters import router as path_parameters
-from apps.query_parameters.query_parameters import router as query_parameters
-from apps.query_parameters_and_string_validation.query_parameters_and_string_validation import \
+from basic.path_parameters import router as path_parameters
+from basic.query_parameters import router as query_parameters
+from basic.query_parameters_and_string_validation import \
     router as query_parameters_and_string_validation
-from apps.request_body.request_body import router as request_body
+from basic.request_body import router as request_body
 
 app = FastAPI()
 

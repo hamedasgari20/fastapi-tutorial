@@ -10,6 +10,7 @@ from basic.query_parameters_and_string_validation import \
 from basic.request_body import router as request_body
 from basic.header_parameter import router as header_parameter
 from basic.response_model import router as response_model
+from basic.form_data import router as form_data
 
 app = FastAPI()
 
@@ -23,6 +24,8 @@ app.include_router(body_nested_models, tags=["body_nested_models"])
 app.include_router(extra_data_types, tags=["extera_data_types"])
 app.include_router(header_parameter, tags=["header_parameter"])
 app.include_router(response_model, tags=["response_model"])
+app.include_router(form_data, tags=["form_data"])
+
 
 
 

@@ -13,6 +13,7 @@ from basic.response_model import router as response_model
 from basic.form_data import router as form_data
 from basic.request_file import router as request_file
 from basic.handling_errors import router as handling_errors
+from basic.path_operation_configuration import router as path_operation_configuration
 
 
 app = FastAPI()
@@ -30,6 +31,7 @@ app.include_router(response_model, tags=["response_model"])
 app.include_router(form_data, tags=["form_data"])
 app.include_router(request_file, tags=["request_file"])
 app.include_router(handling_errors, tags=["handling_errors"])
+app.include_router(path_operation_configuration, tags=["path_operation_configuration"])
 
 
 

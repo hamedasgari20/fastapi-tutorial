@@ -15,6 +15,7 @@ from basic.request_file import router as request_file
 from basic.handling_errors import router as handling_errors
 from basic.path_operation_configuration import router as path_operation_configuration
 from basic.json_compatible_encoder import router as json_compatible_encoder
+from basic.dependencies.dependencies import router as dependencies
 
 app = FastAPI()
 
@@ -33,6 +34,8 @@ app.include_router(request_file, tags=["request_file"])
 app.include_router(handling_errors, tags=["handling_errors"])
 app.include_router(path_operation_configuration, tags=["path_operation_configuration"])
 app.include_router(json_compatible_encoder, tags=["json_compatible_encoder"])
+app.include_router(dependencies, tags=["dependencies"])
+
 
 
 

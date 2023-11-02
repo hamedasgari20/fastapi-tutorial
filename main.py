@@ -16,6 +16,7 @@ from basic.handling_errors import router as handling_errors
 from basic.path_operation_configuration import router as path_operation_configuration
 from basic.json_compatible_encoder import router as json_compatible_encoder
 from basic.dependencies.dependencies import router as dependencies
+from basic.dependencies.clasess_as_dependencies import router as clasess_as_dependencies
 
 app = FastAPI()
 
@@ -35,6 +36,8 @@ app.include_router(handling_errors, tags=["handling_errors"])
 app.include_router(path_operation_configuration, tags=["path_operation_configuration"])
 app.include_router(json_compatible_encoder, tags=["json_compatible_encoder"])
 app.include_router(dependencies, tags=["dependencies"])
+app.include_router(clasess_as_dependencies, tags=["classes_as_dependencies"])
+
 
 
 

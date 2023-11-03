@@ -19,7 +19,6 @@ from basic.dependencies.dependencies import router as dependencies
 from basic.dependencies.clasess_as_dependencies import router as clasess_as_dependencies
 from basic.dependencies.sub_dependencies import router as sub_dependencies
 from basic.dependencies.dependencies_as_decorator import router as dependencies_as_decorator
-from basic.auth.api import router as auth
 
 
 app = FastAPI()
@@ -43,7 +42,6 @@ app.include_router(dependencies, tags=["dependencies"])
 app.include_router(clasess_as_dependencies, tags=["classes_as_dependencies"])
 app.include_router(sub_dependencies, tags=["sub_dependencies"])
 app.include_router(dependencies_as_decorator, tags=["dependencies_as_decorator"])
-app.include_router(auth, tags=["auth"])
 
 
 

@@ -18,6 +18,7 @@ from basic.json_compatible_encoder import router as json_compatible_encoder
 from basic.dependencies.dependencies import router as dependencies
 from basic.dependencies.clasess_as_dependencies import router as clasess_as_dependencies
 from basic.dependencies.sub_dependencies import router as sub_dependencies
+from basic.dependencies.dependencies_as_decorator import router as dependencies_as_decorator
 
 app = FastAPI()
 
@@ -39,6 +40,8 @@ app.include_router(json_compatible_encoder, tags=["json_compatible_encoder"])
 app.include_router(dependencies, tags=["dependencies"])
 app.include_router(clasess_as_dependencies, tags=["classes_as_dependencies"])
 app.include_router(sub_dependencies, tags=["sub_dependencies"])
+app.include_router(dependencies_as_decorator, tags=["dependencies_as_decorator"])
+
 
 
 
